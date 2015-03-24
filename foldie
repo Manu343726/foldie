@@ -125,7 +125,7 @@ class FoldieCommands(object):
         self.runner = None
         self.args = None
 
-        self.commands = [command for command, _ in inspect.getmembers(FoldieRunner, predicate=inspect.ismethod)]
+        self.commands = [command for command, _ in inspect.getmembers(FoldieRunner, predicate=inspect.ismethod) if not command.startswith('_')]
 
     def _parse_args(self, args):
 
