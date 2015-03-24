@@ -1,0 +1,414 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"FOLDIE_",
+				"FOLDIE_TO_RUNTIME_PRINTABLE"
+			],
+			[
+				"result",
+				"result_map"
+			],
+			[
+				"false",
+				"false_type"
+			],
+			[
+				"dela",
+				"delayed_eval"
+			],
+			[
+				"is",
+				"is_metafunction_class"
+			],
+			[
+				"get",
+				"get_apply"
+			],
+			[
+				"CMAKE_C",
+				"CMAKE_<LANG>_COMPILER"
+			],
+			[
+				"B2",
+				"__B2_CALL"
+			],
+			[
+				"BII",
+				"BIICODE_BOOST_VERSION"
+			],
+			[
+				"publ",
+				"publish_block"
+			],
+			[
+				"Bii",
+				"BiiBoostCorruptSettingsError"
+			],
+			[
+				"block",
+				"block"
+			],
+			[
+				"tu",
+				"true"
+			],
+			[
+				"dexcl",
+				"decltype"
+			],
+			[
+				"make_algo",
+				"make_algorithm"
+			],
+			[
+				"algor",
+				"algorithm"
+			],
+			[
+				"algori",
+				"algorithm_wrapper"
+			],
+			[
+				"al",
+				"algorithm_factory"
+			],
+			[
+				"catego",
+				"categories"
+			],
+			[
+				"una",
+				"unary_inmutable"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"hash",
+				"hash_t"
+			],
+			[
+				"vers",
+				"version_string"
+			],
+			[
+				"ver",
+				"version_string"
+			],
+			[
+				"Boost",
+				"Boost_COMPILER"
+			],
+			[
+				"__",
+				"__toolset_name"
+			],
+			[
+				"BII_",
+				"BII_BOOST_BUILD_FORCE"
+			],
+			[
+				"BII_BOO",
+				"BII_BOOST_VERSION"
+			],
+			[
+				"aux",
+				"aux_declare_variables"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\n\nimport argparse\n\ndef main():\n	parser = argparse.\n\nif __name__ == \"__main__\":\n	main()",
+			"file": "foldie.py",
+			"file_size": 83,
+			"file_write_time": 1427028663000000,
+			"settings":
+			{
+				"buffer_size": 86,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"selected_items":
+		[
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 417.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/manu343726/Documentos/foldie/foldie-cmake",
+		"/home/manu343726/Documentos/foldie/CMakeLists.txt",
+		"/home/manu343726/Documentos/Manu343726.github.io/_config.yml",
+		"/home/manu343726/Documentos/Manu343726.github.io/about/index.md",
+		"/home/manu343726/Documentos/Manu343726.github.io/_posts/2014-10-19-i-hate-the-switch-statement.md",
+		"/home/manu343726/Documentos/Manu343726.github.io/_posts/2015-03-19-haskellizing-tmp.markdown",
+		"/home/manu343726/Documentos/turbo/blocks/manu343726/turbo_core/map.hpp",
+		"/home/manu343726/Documentos/turbo/blocks/manu343726/turbo_main/main.cpp",
+		"/home/manu343726/Descargas/src/main.cpp",
+		"/home/manu343726/Documentos/turbo/blocks/manu343726/turbo_core/eval.hpp",
+		"/home/manu343726/Descargas/src/Polinomio2ºGrado.h",
+		"/home/manu343726/Descargas/src/Polinomio.h",
+		"/home/manu343726/Documentos/turbo/blocks/manu343726/turbo_core/lambda.hpp",
+		"/home/manu343726/Documentos/fit/fit/lazy.h",
+		"/home/manu343726/Documentos/fit/fit/pipable.h",
+		"/home/manu343726/Documentos/fit/fit/variadic.h",
+		"/home/manu343726/Documentos/fit/fit/always.h",
+		"/home/manu343726/Documentos/boost-biicode/blocks/boost/install/install.cmake",
+		"/home/manu343726/Documentos/try-cmakepp/blocks/examples/cmakepp/CMakeLists.txt",
+		"/home/manu343726/.i3/config",
+		"/home/manu343726/Documentos/boost-biicode/blocks/boost/install/build_jobs.cmake",
+		"/home/manu343726/Documentos/octopus/blocks/manu343726/math/viewable.hpp",
+		"/home/manu343726/Documentos/boost-biicode/README.md",
+		"/home/manu343726/Documentos/boost-biicode/settings.py",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/biicode/boost/README.md",
+		"/home/manu343726/Documentos/snail/blocks/foonathan/string_id/CMakeLists.txt",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/CMakeLists.txt",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/biicode/boost/setup.cmake",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/biicode/boost/biicode.conf",
+		"/home/manu343726/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/manu343726/boost-lib/CMakeLists.txt",
+		"/home/manu343726/Documentos/boost-biicode/blocks/boost/install/CMakeLists.txt",
+		"/home/manu343726/Documentos/boost-biicode/blocks/toeb/cmakepp/biicode.conf",
+		"/home/manu343726/Documentos/snail/deps/foonathan/string_id/CMakeLists.txt",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/manu343726/boost-lib/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/manu343726/boost-main/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/manu343726/math/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/examples/boost-signals/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/examples/boost-phoenix/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/examples/boost-multiindex/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/examples/boost-flyweight/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/examples/boost-filesystem/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/generate.py",
+		"/home/manu343726/Documentos/boost-biicode/blocktemplates/examples/boost-coroutine/biicode.conf",
+		"/home/manu343726/Documentos/boost-biicode/settings.yml",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/core.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/core/algorithm.hpp",
+		"/home/manu343726/Documentos/snail/README.md",
+		"/home/manu343726/Documentos/snail/.travis.yml",
+		"/home/manu343726/Documentos/boost-biicode/.travis.yml",
+		"/home/manu343726/Documentos/range-v3/.travis.yml",
+		"/home/manu343726/.vimrc",
+		"/home/manu343726/Documentos/range-v3/README.md",
+		"/home/manu343726/Documentos/edalib/.travis.yml",
+		"/home/manu343726/.biicode/boost/1.57.0/boost/smart_ptr/detail/sp_counted_impl.hpp",
+		"/home/manu343726/.biicode/boost/1.57.0/boost/smart_ptr/detail/shared_count.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/core/categories.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/core/container.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/test.cpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/algorithm.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/container.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/categories.hpp",
+		"/home/manu343726/.config/sublime-text-2/Packages/CMakeEditor/README.md",
+		"/home/manu343726/Documentos/edalib/appveyor.yml",
+		"/usr/share/cmake-3.1/Modules/FindBoost.cmake",
+		"/home/manu343726/Documentos/biicode-packages/archlinux/Dockerfile",
+		"/home/manu343726/Documentos/biicode-packages/shippable.yml",
+		"/home/manu343726/Documentos/edalib/blocks/manu343726/build_setup/compiler_flags.cmake",
+		"/home/manu343726/Documentos/edalib/blocks/manu343726/build_config/compiler_id.cmake",
+		"/home/manu343726/Documentos/edalib/blocks/manu343726/edalib/CMakeLists.txt",
+		"/home/manu343726/Documentos/boost-biicode/blocks/boost/install/utils.cmake",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/core/entity.hpp",
+		"/home/manu343726/Documentos/snail/blocks/manu343726/snail/core/hash.hpp",
+		"/home/manu343726/Descargas/prac2.clp",
+		"/home/manu343726/.ssh/id_rsa.pub"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 89.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"endhighlight",
+			"```",
+			"``` cpp",
+			"aviable",
+			"dessigned",
+			"behaviour",
+			"argumments",
+			"\n",
+			"_checkEntry",
+			"workingTrack",
+			"boostVersion",
+			"settingToTag",
+			"(",
+			"([](",
+			"(",
+			"_boost_COMPILER",
+			"CLANG_COMPILER_FLAGS",
+			"LINKER"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"endhighlight",
+			"{% endhighlight %}",
+			"{% highlight cpp %}",
+			"available",
+			"designed",
+			"behavior",
+			"arguments"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "foldie.py",
+					"settings":
+					{
+						"buffer_size": 86,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2,
+								2
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CMakeEditor":
+	{
+		"height": 25.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true
+}
