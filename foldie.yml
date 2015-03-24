@@ -1,17 +1,17 @@
 
 datatypes:
   int:  tml::integral_constant<int,@1>
+  float: FLOAT(@1)
   list: tml::list<@...>
-  pair: tml::maps::pair<@1,@2>
-  dict: tml::maps::map<@...>
+  pair: tml::list<@1,@2>
 
 input:
-  x: 1
-  y: (1,2,3)
-  z: (1,[3,4],())
+  begin: 1
+  end: 2000
 
 header: 'foldie.hpp'
 build_command: 'bii build'
+run_command: './bin/manu343726_foldie_main'
 
 output:
   - out
@@ -23,5 +23,5 @@ loopback:
   x: out
 
 settings:
-  verbose: 1
+  verbose: 0
   timeout: 100s

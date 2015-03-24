@@ -123,6 +123,14 @@ class DataTranslator(object):
 
         return replace_string_range(holder, begin, end, str(data))
 
+    def _translate_float(self, data):
+        holder = self.holders['float']
+
+        begin, end = self._parsed_holders['float'][0]
+
+        return replace_string_range(holder, begin, end, str(data))
+
+
     def _translate_pair(self, data):
         holder = self.holders['pair']
 

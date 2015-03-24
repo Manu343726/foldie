@@ -1,0 +1,159 @@
+#!/bin/sh
+''''which python2 >/dev/null 2>&1 && exec python2 "$0" "$@" # '''
+''''which python  >/dev/null 2>&1 && exec python  "$0" "$@" # '''
+''''exec echo "Error: I can't find python anywhere"         # '''
+
+from holderparsing import DataTranslator
+from yaml import load
+import sys
+import ast
+import subprocess
+import argparse
+import inspect
+
+
+class FoldieSettingsCompiler(object):
+
+    FOLDIE_NAMESPACE = 'foldie'
+    FOLDIE_INPUT_NAMESPACE = 'input'
+
+
+    def __init__(self, settings):
+        self.settings = settings
+        self.translator = DataTranslator(self.settings['datatypes'])
+
+    @staticmethod
+    def from_file(foldie_file):
+        return FoldieSettingsCompiler(load(open(foldie_file, 'r').read()))
+
+    @staticmethod
+    def from_settings(settings):
+        return FoldieSettingsCompiler(settings)
+
+
+    def foldie_main(self):
+        main_header = 'int main(){'
+
+        for output_var in self.settings['output'].items():
+            main_header += '    std::cout << {}<{}>() << std::endl;\n'.format(self.settings['to_runtime'],
+                                   output_var)
+
+        return main_header + '}'
+
+    def foldie_variables(self):
+        def mapping(x):
+            try:
+                return '    using {} = {};'.format(x[0], self.translator(ast.literal_eval(str(x[1]))))
+            except Exception as e:
+                print '"{}" x={}'.format(e, x[1])
+                raise e
+
+        return '\n'.join(map(mapping, self.settings['input'].items()))
+
+    def foldie_warnings(self):
+        if self.settings['settings']['verbose'] > 0:
+            def mapping(x):
+                return '    #warning "FOLDIE INPUT VARIABLE: {} = {}"'.format(x[0], x[1])
+
+            return '\n'.join(map(mapping, self.settings['input'].items())) + '\n'
+        else:
+            return ''
+
+
+    def foldie_hpp(self):
+        header = \
+"""
+#ifndef FOLDIE_HEADER_HPP
+#define FOLDIE_HEADER_HPP
+
+namespace {0} {{ namespace {1} {{
+{2}
+{3}
+}} }}
+
+#endif /* FOLDIE_HEADER_HPP */
+"""
+
+        return header.format(self.FOLDIE_NAMESPACE,
+                       self.FOLDIE_INPUT_NAMESPACE,
+                       self.foldie_warnings(),
+                       self.foldie_variables())
+
+    def foldie_cmake_args(self):
+        return '-DFOLDIE=TRUE -DCMAKE_VERBOSE_MAKEFILE={} \
+                -DFOLDIE_MAIN=\"{}\"'.format('ON' if self.settings['settings']['verbose'] >= 2 else 'OFF',
+                       self.foldie_main())
+
+
+class FoldieRunner(object):
+
+    def __init__(self, compiler):
+        self.compiler = compiler
+        self.settings = compiler.settings
+
+    def _compile_input(self):
+        with file(self.settings['header'], 'w') as header:
+            header.write(self.compiler.foldie_hpp())
+
+    def build(self):
+        self._compile_input();
+        
+        if self.settings['settings']['verbose'] >= 2:
+            print 'Building foldie project...'
+            out = None
+        else:
+            out = subprocess.PIPE
+
+        p = subprocess.Popen(self.settings['build_command'].split(' '), stdout=out)
+        p.communicate()
+
+    def run(self):
+        if self.settings['settings']['verbose'] >= 2:
+            print 'Running foldie project...'
+
+        p = subprocess.Popen(self.settings['run_command'].split(' '))
+        p.communicate()
+
+    def buzz(self):
+        self.build()
+        self.run()
+
+
+class FoldieCommands(object):
+
+    def __init__(self):
+        self.runner = None
+        self.args = None
+
+        self.commands = [command for command, _ in inspect.getmembers(FoldieRunner, predicate=inspect.ismethod)]
+
+    def _parse_args(self, args):
+
+        parser = argparse.ArgumentParser(description='C++ metaprogramming build system')
+
+        parser.add_argument('command', help='foldie command to be run', choices=self.commands)
+        parser.add_argument('--project', help='Foldie project YAML file', default='foldie.yml')
+        parser.add_argument('--verbose', '-v', action='count')
+
+        self.args = parser.parse_args(args)
+
+    def process(self, args):
+        self._parse_args(args)
+
+        self.runner = FoldieRunner(FoldieSettingsCompiler.from_file(self.args.project))
+
+        if self.args.verbose > 0:
+            self.runner.settings['settings']['verbose'] = self.args.verbose 
+
+        getattr(self.runner, self.args.command)()
+
+
+def main():
+    commander = FoldieCommands()
+
+    commander.process(sys.argv[1:])
+    
+
+
+if __name__ == "__main__":
+    main()
