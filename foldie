@@ -42,18 +42,15 @@ class FoldieSettingsCompiler(object):
 
     def foldie_variables(self):
         def mapping(x):
-            try:
-                return '    using {} = {};'.format(x[0], self.translator(ast.literal_eval(str(x[1]))))
-            except Exception as e:
-                print '"{}" x={}'.format(e, x[1])
-                raise e
+            return '    using {} = {};'.format(x[0], self.translator(eval(str(x[1]))))
 
         return '\n'.join(map(mapping, self.settings['input'].items()))
 
     def foldie_warnings(self):
         if self.settings['settings']['verbose'] > 0:
             def mapping(x):
-                return '    #warning "FOLDIE INPUT VARIABLE: {} = {}"'.format(x[0], x[1])
+                print '>>>> mapping: {}'.format(x[1])
+                return '    #warning "FOLDIE INPUT VARIABLE: {} = {} ({})"'.format(x[0], x[1], self.translator(eval(str(x[1]))))
 
             return '\n'.join(map(mapping, self.settings['input'].items())) + '\n'
         else:
@@ -141,6 +138,8 @@ class FoldieCommands(object):
         self._parse_args(args)
 
         self.runner = FoldieRunner(FoldieSettingsCompiler.from_file(self.args.project))
+
+        print self.runner.settings
 
         if self.args.verbose > 0:
             self.runner.settings['settings']['verbose'] = self.args.verbose 
